@@ -4,12 +4,6 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = provess.env.PORT || 3000;
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-})
-
 // Middleware
 
 app.use(cors());
@@ -178,7 +172,8 @@ app.get("/api/test", (req, res) => {
 
 // 啟動 Server
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 
 app.listen(PORT, () => {
 
